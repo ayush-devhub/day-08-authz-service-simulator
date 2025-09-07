@@ -103,7 +103,7 @@ public class AuthzService {
         }
     }
 
-    private boolean deleteUser(String token, int userId){
+    public boolean deleteUser(String token, int userId){
         // Authenticating client is an ADMIN
         User requester = me(token);
 
@@ -118,7 +118,7 @@ public class AuthzService {
             return true;
         }
 
-        return false; 
+        return false;
     }
 
     private User getUserByEmail(String email) {
